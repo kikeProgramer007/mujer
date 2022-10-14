@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Parisienne', cursive;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+       
+}
+.botones button{
+    font-size: 50px;  
+    width:50px;
+    height: 50px;
+    border: none;
+    top: 40%;
+    cursor: pointer; 
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+main button{
+    font-size: 40px;
+    position: absolute;
+    width: 80px;
+    height: 70px;
+    border: none;
+    top: 40%;
+    cursor: pointer;
+}
+
+
+body{
+  /* background: linear-gradient(237.2deg, rgba(76, 223, 197, 0.74) 14.31%, #C73BCA 83.58%);  */
+   /* background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%); */
+   /* background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%); */
+   /* background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%); */
+
+   background-image: linear-gradient(to left, #d558c8 0%, #24d292 100%);
+
+
+   height: 100vh;
+    position: relative;
+}
+
+
+
+
+/* Animación con keyframe llamada "latidos" */
+@keyframes latidos {
+    from { transform: none; }
+    50% { transform: scale(1.4); }
+    to { transform: none; }
+}
+/* En la clase corazon vamos a llamar latidos en la animación  */
+.corazon {
+	display: inline-block;
+	font-size: 150px;
+	text-shadow: 0 0 10px #222,1px 1px  0 #450505;
+	color: red;
+	animation: latidos .5s infinite;
+	transform-origin: center;
+}
