@@ -9,8 +9,8 @@ document.addEventListener('click', e => {
             confirmButtonText: 'Dale click 😊',
              imageUrl: baseurl+'img/shuba-shuba-transparent.gif',
             // imageUrl: baseurl+'img/artificial.gif',
-            // imageWidth: 280,
-            //  imageHeight: 266,
+            imageWidth: 151,
+            imageHeight: 128,
             width: 280,
             padding: '1em',
             color: '#716add',
@@ -34,14 +34,14 @@ document.addEventListener('click', e => {
         if (e.target === btnNo) {
               Swal.fire({
                 title: 'Nooooo...',
-                width: 400,
+                width: 340,
                 text: 'Bueno al menos tuve el valor de intentarlo.',
                 color: '#fffff',
                 imageUrl: baseurl+'img/calamardo.gif',
                 background: 'linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%)',
                 // background: 'linear-gradient(to top, #00c6fb 0%, #005bea 100%)',
-                imageWidth: 150,
-                imageHeight: 150,
+                imageWidth: 120,
+                imageHeight: 120,
                 imageAlt: 'Custom image',
               })
         }
