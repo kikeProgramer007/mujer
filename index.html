@@ -12,60 +12,31 @@
 
     <link rel="icon" href="img/emogin.png" sizes="32x32"/>
 
-    <link rel="stylesheet" href="css/estilos2.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <title>Anabel </title>
 </head>
 <body>
-
-    <style>
-                /* 1 columna para smartphones */
-        .breakpoint  {
-        max-width: 100%;
-        display: inline-block;
-        }
-
-        /* 2 columnas para tablets */
-        @media (min-width: 420px) {
-        .breakpoint  {
-        max-width: 100%;
-        }
-        }
-        /* 4 columnas para grandes dispositivos*/
-        @media (min-width: 760px) {
-        .breakpoint  {
-        max-width: 100%;
-        }
-        }
-    </style>
+  
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12"">
-                <header>
-                     <!-- <img src="img/corazon.svg">  -->
-                   
-                    <center>
-                        <div class="breakpoint">
-                            <img class="breakpoint" src="img/flor_top.png" />
-                        </div> 
-                     <!-- <img src="img/flor_top.png" class="breakpoint"  width="80%"> -->
-                        <h1  class="mb-4">Felíz Día de la Mujer</h1>
-                       
-                        <h4 class="text-danger fw-bold mb-2">Toca el Corazón</h4>
-                        <button class="reproductor corazon mb-2 " style="border: none; background:none; width:50px; height: 50px; font-size: 35px; ">&#x2665;</button>
-
-                        <audio src="music/heroe.mp3"></audio>
-
-                        <h3 class="mb-3">Deseas ver la sorpresa que te hice?</h3>
-                    <center>
+                <header class="text-center">
+                    <div class="breakpoint">
+                        <img class="breakpoint" src="img/flor_top.png" />
+                    </div> 
+                    <h2  class="mb-4">Felíz Día de la Mujer</h2>
+                    <h4 class="text-danger fw-bold mb-2">Toca el Corazón</h4>
+                    <button class="reproductor corazon mb-2 " style="border: none; background:none; width:50px; height: 50px; font-size: 35px; ">&#x2665;</button>
+                    <audio></audio>
+                    <h3 class="mb-3">Deseas ver la sorpresa que te hice?</h3>
                 </header>
             </div>
         </div>
         <div class="d-flex justify-content-center">
             <div class="row mb-3">
                 <div class="col-12">
-                   
                      <div class="botones">
                         <button type="button"  id="si" class="btn btn-danger  fs-3 fw-bold me-md-2">si</button>
                         <button type="button" id="no" class="btn btn-dark  fs-3 fw-bold">no</button>
@@ -74,24 +45,13 @@
             </div>
         </div>
 
-        <div class="row justify-content-md-center">
-            <div class="col-md-auto">
-                <main>
-                       
-                    <center>
-                        
-                         <img src="img/personas.svg"> 
-                       <!-- <img src="img/oozora-subaru-duck.gif" width=498 height=498 alt="img">  -->
-                       <!-- <div class="corazon ">&#x2665;</div> -->
-                    </center>
-                </main>
+        <div class="row justify-content-sm-center">
+            <div class="col-md-auto text-center">
+                <div class="corazon"style="color: rgb(0, 190, 248);">&#x2665;</div>
+                <img src="img/personas.svg" width=230 height=230> 
+                <div class="corazon"style="color: palevioletred;">&#x2665;</div>
             </div>
         </div>
-       <!-- <audio src="/mujer/music/Galantis-Runaway.mp3" autoplay="true" loop="loop"></audio> -->
-
-        <!-- <audio src="music/heroe.mp3" autoplay="autoplay" type="audio/mpeg" constrols="true" loop="loop"></audio> -->
-        <!-- <embed src="music.mp3" width="0" height="0"  autoplay="true"> -->
-   
         </div>
 
     </div>
@@ -99,17 +59,16 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.5.1/dist/sweetalert2.all.min.js"></script>
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
     <script>
         let boton = document.querySelector(".reproductor")
         let audioEtiqueta = document.querySelector("audio")
-    
+
         boton.addEventListener("click", () => {
-          audioEtiqueta.setAttribute("src", "music/heroe.mp3")
-          audioEtiqueta.play()
-          console.log(`Reproduciendo: ${audioEtiqueta.src}`)
+            audioEtiqueta.setAttribute("src", "mp3/Enrique Iglesias - Heroe.mp3")
+            audioEtiqueta.play()
+            console.log(`Reproduciendo: ${audioEtiqueta.src}`)
         })
     </script>
-
-
 </body>
 </html>
