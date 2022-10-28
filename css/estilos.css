@@ -53,6 +53,7 @@ body{
 	animation: latidos .5s infinite;
 	transform-origin: center;
 }
+
 /* 1 columna para smartphones */
 .breakpoint  {
     max-width: 100%;
