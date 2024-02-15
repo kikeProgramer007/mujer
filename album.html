@@ -1,0 +1,144 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Sandbox</title>
+  
+    <!-- magnific-popup css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/album.css">
+</head>
+<body>
+  
+    <div class="gallery">
+        <ul class="controls">
+            <li class="buttons active" data-filter="all">Todos</li>
+            <li class="buttons" data-filter="ice-cream">Yo</li>
+            <li class="buttons" data-filter="chocolate">Tú</li>
+            <li class="buttons" data-filter="cake">Nosotros</li>
+            <li class="buttons" data-filter="juice">Militar</li>
+           <li class="buttons" id="redireccionar" >Atras</li> 
+            <!-- <li class="buttons" data-filter="sandwich">sandwich</li> -->
+     
+        </ul>
+    
+        <div class="image-container">
+            <a href="images/imagen1.jpeg" class="image ice-cream">
+                <img src="images/imagen1.jpeg" alt="">
+            </a>
+            <a href="images/plaza1.jpeg" class="image ice-cream">
+                <img src="images/plaza1.jpeg" alt="">
+            </a>
+            <a href="images/plaza2.jpeg" class="image ice-cream">
+                <img src="images/plaza2.jpeg" alt="">
+            </a>
+            <a href="images/plaza3.jpeg" class="image ice-cream">
+                <img src="images/plaza3.jpeg" alt="">
+            </a>
+         
+            <a href="images/tu1.jpeg" class="image chocolate">
+                <img src="images/tu1.jpeg" alt="">
+            </a>
+
+            <a href="images/nosotros.jpeg" class="image cake">
+                <img src="images/nosotros.jpeg" alt="">
+            </a>
+            <a href="images/nosotros1.jpeg" class="image cake">
+                <img src="images/nosotros1.jpeg" alt="">
+            </a>
+            <a href="images/nosotros2.jpeg" class="image cake">
+                <img src="images/nosotros2.jpeg" alt="">
+            </a>
+            <a href="images/nosotros3.jpeg" class="image cake">
+                <img src="images/nosotros3.jpeg" alt="">
+            </a>
+            <a href="images/nosotros4.jpeg" class="image cake">
+                <img src="images/nosotros4.jpeg" alt="">
+            </a>
+            <a href="images/nosotros5.jpeg" class="image cake">
+                <img src="images/nosotros5.jpeg" alt="">
+            </a>
+            <a href="images/nosotros6.jpeg" class="image cake">
+                <img src="images/nosotros6.jpeg" alt="">
+            </a>
+            <a href="images/nosotros7.jpeg" class="image cake">
+                <img src="images/nosotros7.jpeg" alt="">
+            </a>
+            <a href="images/nosotros8.jpeg" class="image cake">
+                <img src="images/nosotros8.jpeg" alt="">
+            </a>
+    
+            <a href="images/cuartel1.jpeg" class="image juice">
+                <img src="images/cuartel1.jpeg" alt="">
+            </a>
+            <a href="images/cuartel2.jpeg" class="image juice">
+                <img src="images/cuartel2.jpeg" alt="">
+            </a>
+    
+            <!-- <a href="images/imagen1.jpeg" class="image sandwich">
+                <img src="images/imagen1.jpeg" alt="">
+            </a>
+            <a href="images/imagen1.jpeg" class="image sandwich">
+                <img src="images/imagen1.jpeg" alt="">
+            </a>
+            <a href="images/imagen1.jpeg" class="image sandwich">
+                <img src="images/imagen1.jpeg" alt="">
+            </a>
+            <a href="images/imagen1.jpeg" class="image sandwich">
+                <img src="images/imagen1.jpeg" alt="">
+            </a> -->
+    
+        </div>
+    
+    </div>
+    
+    
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- magnific popup js cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    
+    <script>
+    
+    $(document).ready(function(){
+    
+
+
+        $('.buttons').click(function(){
+    
+            $(this).addClass('active').siblings().removeClass('active');
+    
+            var filter = $(this).attr('data-filter')
+    
+            if(filter == 'all'){
+                $('.image').show(400);
+            }else{
+                $('.image').not('.'+filter).hide(200);
+                $('.image').filter('.'+filter).show(400);
+            }
+    
+        });
+    
+        $('.gallery').magnificPopup({
+    
+            delegate:'a',
+            type:'image',
+            gallery:{
+                enabled:true
+            }
+    
+        });
+
+        $('#redireccionar').click(function() {
+            window.location.href = 'index.html'; // Cambia 'otra_pagina.html' con la URL de la página a la que deseas redireccionar
+        });
+  
+    });
+    
+    </script>
+</body>
+</html>
