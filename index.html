@@ -26,14 +26,21 @@
                     <div class="breakpoint">
                         <img class="breakpoint" src="img/flor_top.png" />
                     </div> 
-                    <h2  class="mb-4">Lisbeth Rossel Te Quiero Mucho</h2>
+                    <h2  class="mb-4">¡Feliz día de $an Valentin!</h2>
                     <h4 class="text-danger fw-bold mb-2">Toca el Corazón</h4>
-                    <button class="reproductor corazon mb-2 " style="border: none; background:none; width:50px; height: 50px; font-size: 35px; ">&#x2665;</button>
+                    <div class="content-heart">
+                        <div class="heart reproductor">
+                            <!-- <button class="reproductor corazon mb-2 " style="border: none; background:none; width:50px; height: 50px; font-size: 35px; ">&#x2665;</button> -->
+                        </div>
+                    </div>
+                    
                     <audio></audio>
-                    <h3 class="mb-3">Querida usted me quiere?</h3>
+                    <h3 class="mb-3">¿Deseas ver un hermoso detalle?</h3>
                 </header>
             </div>
         </div>
+    
+        
         <div class="d-flex justify-content-center">
             <div class="row mb-3">
                 <div class="col-12">
@@ -55,7 +62,7 @@
                 <a  href="album.html" class="btn-album">Album de fotos</a>
             </center>
         </div>
-
+        
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.5.1/dist/sweetalert2.all.min.js"></script>
@@ -67,7 +74,7 @@
         let audioEtiqueta = document.querySelector("audio")
 
         boton.addEventListener("click", () => {
-            audioEtiqueta.setAttribute("src", "mp3/Enrique Iglesias - Heroe.mp3")
+            audioEtiqueta.setAttribute("src", "mp3/Amo-Axel.mp3")
             audioEtiqueta.play()
             console.log(`Reproduciendo: ${audioEtiqueta.src}`)
         })

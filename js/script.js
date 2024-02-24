@@ -31,7 +31,7 @@ document.addEventListener('click', e => {
               Swal.fire({
                 title: 'Nooooo...',
                 width: 340,
-                text: 'Bueno al menos tuve el valor de intentarlo.',
+                text: '😭Entonces soy un soldado caido.💔',
                 color: '#fffff',
                 imageUrl: baseurl+'img/calamardo.gif',
                 background: 'linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%)',

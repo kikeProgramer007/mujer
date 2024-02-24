@@ -38,22 +38,6 @@ body{
    position: relative;
 }
 
-/* Animación con keyframe llamada "latidos" */
-@keyframes latidos {
-    from { transform: none; }
-    50% { transform: scale(1.4); }
-    to { transform: none; }
-}
-/* En la clase corazon vamos a llamar latidos en la animación  */
-.corazon {
-	display: inline-block;
-	font-size:25px;
-	text-shadow: 0 0 10px #222,1px 1px  0 #450505;
-	color: red;
-	animation: latidos .5s infinite;
-	transform-origin: center;
-}
-
 .btn-album{
     text-decoration: none;
     font-size:35px;
@@ -87,3 +71,47 @@ body{
     max-width: 100%;
     }
 }
+
+.content-heart {
+    font-size: 1.2em;
+    font-size: 1.2em;
+    display: grid;
+    min-height: 60px;
+    justify-content: center;
+    align-content: center;
+  }
+  .heart{
+    box-shadow: 5px 5px 10px #880e0e60;
+    --size: 30px;
+    --color: red;
+    transform:rotate(45deg);
+    animation:beat 1s infinite alternate ease-in-out;
+  }
+  @keyframes beat{
+    to{
+      transform: rotate(45deg) scale(1.25);
+    }
+  }
+  
+  .heart,
+  .heart::before,
+  .heart::after{
+      width: var(--size);
+      height: var(--size);
+      background:var(--color);
+  }
+  .heart::before,
+  .heart::after{
+    content:'';
+    display: block;
+    border-radius:50%;
+  }
+  .heart::before{
+    margin-top: calc(var(--size)*-.5);
+   
+  }
+  .heart::after{
+    margin-top: calc(var(--size)* -0.5);
+    margin-left: calc(var(--size)* -0.5);
+  }
+  
